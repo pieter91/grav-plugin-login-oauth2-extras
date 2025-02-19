@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'pietervanderweel/oauth2-scouting',
-        'pretty_version' => 'dev-develop',
-        'version' => 'dev-develop',
-        'reference' => '5d5bbe9eba96754c189f9edefbdecc34eafece38',
+        'pretty_version' => 'dev-scouting',
+        'version' => 'dev-scouting',
+        'reference' => null,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'pietervanderweel/oauth2-scouting' => array(
-            'pretty_version' => 'dev-develop',
-            'version' => 'dev-develop',
-            'reference' => '5d5bbe9eba96754c189f9edefbdecc34eafece38',
+            'pretty_version' => 'dev-scouting',
+            'version' => 'dev-scouting',
+            'reference' => null,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

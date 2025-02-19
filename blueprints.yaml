@@ -1005,29 +1005,29 @@ form:
           content: '[<i class="fa fa-book"></i> Okta for OAuth2](https://github.com/foxworth42/oauth2-okta?target=_blank)'
           markdown: true
 
-    wordpress:
+    scouting:
       type: fieldset
-      title: Wordpress
+      title: Scouting Nederland
       collapsible: true
 
       fields:
 
-        wordpress_columns:
+        scouting_columns:
           type: columns
 
           fields:
 
-            wordpress_column_left:
+            scouting_column_left:
               type: column
 
               fields:
 
-                wordpress.site:
+                scouting.site:
                   type: display
                   style: vertical
                   content: '<h3>Site</h3>'
 
-                providers.wordpress.enabled:
+                providers.scouting.enabled:
                   type: toggle
                   label: Enabled
                   highlight: 1
@@ -1038,20 +1038,15 @@ form:
                   validate:
                     type: bool
 
-                providers.wordpress.client_id:
+                providers.scouting.client_id:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
 
-                providers.wordpress.client_secret:
+                providers.scouting.client_secret:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
 
-                admin.providers.wordpress.domain:
-                  type: text
-                  label: PLUGIN_LOGIN_OAUTH2.RESTRICT_DOMAIN
-                  placeholder: https://www.example.org
-
-                providers.wordpress.options.scope:
+                providers.scouting.options.scope:
                   type: selectize
                   size: large
                   label: PLUGIN_LOGIN_OAUTH2.SCOPE
@@ -1059,22 +1054,22 @@ form:
                   validate:
                     type: commalist
 
-                admin.providers.wordpress.options.label:
+                providers.scouting.options.label:
                   type: text
-                  placeholder: Wordpress
+                  placeholder: Scouting Nederland
                   label: Custom button text
 
-            wordpress_column_right:
+            scouting_column_right:
               type: column
 
               fields:
 
-                wordpress.admin:
+                scouting.admin:
                   type: display
                   style: vertical
                   content: '<h3>Admin</h3>'
 
-                admin.providers.wordpress.enabled:
+                admin.providers.scouting.enabled:
                   type: toggle
                   label: Enabled
                   highlight: 1
@@ -1085,20 +1080,20 @@ form:
                   validate:
                     type: bool
 
-                admin.providers.wordpress.client_id:
+                admin.providers.scouting.client_id:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
 
-                admin.providers.wordpress.client_secret:
+                admin.providers.scouting.client_secret:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
 
-                admin.providers.wordpress.domain:
+                admin.providers.scouting.domain:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.RESTRICT_DOMAIN
                   placeholder: https://www.example.org
 
-                admin.providers.wordpress.options.scope:
+                admin.providers.scouting.options.scope:
                   type: selectize
                   size: large
                   label: PLUGIN_LOGIN_OAUTH2.SCOPE
@@ -1106,13 +1101,13 @@ form:
                   validate:
                     type: commalist
 
-                admin.providers.wordpress.options.label:
+                admin.providers.scouting.options.label:
                   type: text
-                  placeholder: Wordpress
+                  placeholder: Scouting Nederland
                   label: Custom button text
 
-        providers.wordpress.description:
+        providers.scouting.description:
           type: display
           style: vertical
-          content: '[<i class="fa fa-book"></i> OAuth Server for Wordpress](https://wordpress.org/plugins/oauth2-provider/)'
+          content: '<i class="fa fa-book"></i> OAuth Scouting Nederland'
           markdown: true

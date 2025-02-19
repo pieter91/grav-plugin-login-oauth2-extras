@@ -23,6 +23,10 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         array (
             'Stevenmaguire\\OAuth2\\Client\\' => 28,
         ),
+        'P' => 
+        array (
+            'Pietervanderweel\\OAuth2\\Client\\' => 31,
+        ),
         'O' => 
         array (
             'Omines\\OAuth2\\Client\\' => 21,
@@ -30,10 +34,6 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         'M' => 
         array (
             'Mrjoops\\OAuth2\\Client\\' => 22,
-        ),
-        'K' => 
-        array (
-            'Krombox\\OAuth2\\Client\\' => 22,
         ),
         'G' => 
         array (
@@ -68,6 +68,10 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         array (
             0 => __DIR__ . '/..' . '/stevenmaguire/oauth2-keycloak/src',
         ),
+        'Pietervanderweel\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pietervanderweel/oauth2-scouting/src',
+        ),
         'Omines\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
@@ -75,10 +79,6 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         'Mrjoops\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/mrjoops/oauth2-jira/src',
-        ),
-        'Krombox\\OAuth2\\Client\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/krombox/oauth2-wordpress/src',
         ),
         'Gravure\\Patreon\\Oauth\\' => 
         array (

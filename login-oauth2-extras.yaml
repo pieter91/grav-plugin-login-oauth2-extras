@@ -65,13 +65,13 @@ providers:
     issuer:
     options:
       scope: ['openid', 'email', 'profile']
-  wordpress:
+  scouting:
     enabled: false
     client_id:
     client_secret:
     domain:
     options:
-      scope: ['openid', 'email', 'profile']
+      scope: ['openid', 'email', 'profile', 'membership']
       label: ''
 
 admin:
@@ -142,11 +142,12 @@ admin:
       issuer:
       options:
         scope: ['openid', 'email', 'profile']
-    wordpress:
+    scouting:
       enabled: false
       client_id:
       client_secret:
       domain: 
       options:
-        scope: ['openid', 'email', 'profile']
+        scope: ['openid', 'email', 'profile', 'membership']
         label: ''
+

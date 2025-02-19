@@ -4,7 +4,7 @@ namespace Grav\Plugin\Login\OAuth2\Providers;
 class ScoutingProvider extends ExtraProvider
 {
     protected $name = 'Scouting';
-    protected $classname = 'Pietervanderweel\\Oauth2\\Client\\Provider\\Scouting';
+    protected $classname = 'Pietervanderweel\\OAuth2\\Client\\Provider\\Scouting';
 
     public function initProvider(array $options): void
     {
@@ -27,13 +27,19 @@ class ScoutingProvider extends ExtraProvider
 
     public function getUserData($user)
     {
-        $data = $user->toArray();
+        // $data = $user->toArray();
 
         $data_user = [
             'id'         => $user->getId(),
-            'login'      => $data['email'],
-            'fullname'   => $data['name'],
-            'email'      => $data['email'],
+            'login'      => $user->getEmail(),
+            'fullname'   => $user->getFullName(),
+            'email'      => $user->getEmail(),
+            'email_verified'      => $user->getEmailVerified(),
+            'first_name' => $user->getFirstName(),
+            'infix' => $user->getInfix(),
+            'family_name' => $user->getLastName(),
+            'scouting_id' => $user->getSOLId(),
+            'user' => $user->toArray()
         ];
 
         return $data_user;
