@@ -1,0 +1,39 @@
+{
+    "name": "pietervanderweel/oauth2-scouting",
+    "description": "Scouting Nederland OAuth 2.0 and OIDC Client Provider for The PHP League OAuth2-Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pieter van der Weel",
+            "email": "webmaster@johnmott.nl",
+            "homepage": "https://github.com/pieter91"
+        }
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authorisation",
+        "scouting",
+        "scouting"
+    ],
+    "require": {
+        "league/oauth2-client": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pietervanderweel\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pietervanderweel\\OAuth2\\Client\\Test\\": "test/src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
