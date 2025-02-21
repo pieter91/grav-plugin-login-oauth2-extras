@@ -69,7 +69,6 @@ providers:
     enabled: false
     client_id:
     client_secret:
-    domain:
     options:
       scope: ['openid', 'email', 'profile', 'membership']
       label: ''
@@ -146,7 +145,6 @@ admin:
       enabled: false
       client_id:
       client_secret:
-      domain: 
       options:
         scope: ['openid', 'email', 'profile', 'membership']
         label: ''
