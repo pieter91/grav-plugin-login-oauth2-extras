@@ -62,8 +62,12 @@ class ScoutingUser implements ResourceOwnerInterface
      */
     public function getInfix()
     {
-        return $this->response['infix'];
+        if (array_key_exists('infix', $this->response)) {
+            return $this->response['infix'];
+        }
+        return null;
     }
+
 
     /**
      * Get preferred last name.
