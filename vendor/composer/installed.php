@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '821a27029972282a0f78810664c14c3cc9e57113',
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
+        'reference' => 'db3b3acc36c86bfd4983f75d31ddf5c97a5e9318',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '821a27029972282a0f78810664c14c3cc9e57113',
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
+            'reference' => 'db3b3acc36c86bfd4983f75d31ddf5c97a5e9318',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -38,9 +38,9 @@
             'dev_requirement' => false,
         ),
         'foxworth42/oauth2-okta' => array(
-            'pretty_version' => 'v1.0.2',
-            'version' => '1.0.2.0',
-            'reference' => '0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946',
+            'pretty_version' => 'v1.0.5',
+            'version' => '1.0.5.0',
+            'reference' => '7450c5312c7288877ccff3877228e0f702ef8ef5',
             'type' => 'library',
             'install_path' => __DIR__ . '/../foxworth42/oauth2-okta',
             'aliases' => array(),
@@ -75,15 +75,6 @@
                 0 => '*',
             ),
         ),
-        'krombox/oauth2-wordpress' => array(
-            'pretty_version' => '0.1.1',
-            'version' => '0.1.1.0',
-            'reference' => '69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../krombox/oauth2-wordpress',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
         'league/oauth2-client' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -100,9 +91,9 @@
             'dev_requirement' => false,
         ),
         'omines/oauth2-gitlab' => array(
-            'pretty_version' => '3.4.0',
-            'version' => '3.4.0.0',
-            'reference' => '0c37361c54fae71a85350c445bda1834db5859af',
+            'pretty_version' => '3.7.0',
+            'version' => '3.7.0.0',
+            'reference' => '3dee862326d999b0517da4dd83b169e08f5ddf0a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../omines/oauth2-gitlab',
             'aliases' => array(),
@@ -114,6 +105,15 @@
                 0 => '*',
             ),
         ),
+        'pietervanderweel/oauth2-scouting' => array(
+            'pretty_version' => 'dev-scouting',
+            'version' => 'dev-scouting',
+            'reference' => 'd87de84b998c5c968718eb92e4b6e781ced70661',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../pietervanderweel/oauth2-scouting',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'psr/http-message' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -121,9 +121,9 @@
             ),
         ),
         'stevenmaguire/oauth2-keycloak' => array(
-            'pretty_version' => '3.0.0',
-            'version' => '3.0.0.0',
-            'reference' => '645b84107b82a08cfed9c101081eb8548ea5be11',
+            'pretty_version' => '3.2.0',
+            'version' => '3.2.0.0',
+            'reference' => '34e4824f5fa26aa8e90f1258859c75570c12d27a',
             'type' => 'library',
             'install_path' => __DIR__ . '/../stevenmaguire/oauth2-keycloak',
             'aliases' => array(),
@@ -148,9 +148,9 @@
             'dev_requirement' => false,
         ),
         'wohali/oauth2-discord-new' => array(
-            'pretty_version' => '1.1.0',
-            'version' => '1.1.0.0',
-            'reference' => '0dcb5059cded358f55ae566de9621652cf8542c6',
+            'pretty_version' => '1.2.1',
+            'version' => '1.2.1.0',
+            'reference' => '2df4d2a882e04c749880797704e4bde8f00ea1d9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../wohali/oauth2-discord-new',
             'aliases' => array(),

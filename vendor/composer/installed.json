@@ -123,17 +123,17 @@
         },
         {
             "name": "foxworth42/oauth2-okta",
-            "version": "v1.0.2",
-            "version_normalized": "1.0.2.0",
+            "version": "v1.0.5",
+            "version_normalized": "1.0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/foxworth42/oauth2-okta.git",
-                "reference": "0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946"
+                "reference": "7450c5312c7288877ccff3877228e0f702ef8ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/foxworth42/oauth2-okta/zipball/0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946",
-                "reference": "0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946",
+                "url": "https://api.github.com/repos/foxworth42/oauth2-okta/zipball/7450c5312c7288877ccff3877228e0f702ef8ef5",
+                "reference": "7450c5312c7288877ccff3877228e0f702ef8ef5",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 "phpunit/phpunit": "^7.0",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2020-09-28T06:28:26+00:00",
+            "time": "2024-11-21T01:46:49+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -174,7 +174,7 @@
             ],
             "support": {
                 "issues": "https://github.com/foxworth42/oauth2-okta/issues",
-                "source": "https://github.com/foxworth42/oauth2-okta/tree/v1.0.2"
+                "source": "https://github.com/foxworth42/oauth2-okta/tree/v1.0.5"
             },
             "install-path": "../foxworth42/oauth2-okta"
         },
@@ -228,68 +228,6 @@
                 "source": "https://github.com/gravure/oauth2-patreon"
             },
             "install-path": "../gravure/oauth2-patreon"
-        },
-        {
-            "name": "krombox/oauth2-wordpress",
-            "version": "0.1.1",
-            "version_normalized": "0.1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/krombox/oauth2-wordpress.git",
-                "reference": "69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/krombox/oauth2-wordpress/zipball/69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095",
-                "reference": "69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "^1.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "time": "2018-03-18T13:25:11+00:00",
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Krombox\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Kapustian",
-                    "email": "ikrombox@gmail.com",
-                    "homepage": "https://github.com/krombox"
-                }
-            ],
-            "description": "WordPress OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "authorisation",
-                "authorization",
-                "client",
-                "oauth",
-                "oauth2",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/krombox/oauth2-wordpress/issues",
-                "source": "https://github.com/krombox/oauth2-wordpress/tree/0.1.1"
-            },
-            "install-path": "../krombox/oauth2-wordpress"
         },
         {
             "name": "mrjoops/oauth2-jira",
@@ -349,36 +287,43 @@
         },
         {
             "name": "omines/oauth2-gitlab",
-            "version": "3.4.0",
-            "version_normalized": "3.4.0.0",
+            "version": "3.7.0",
+            "version_normalized": "3.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omines/oauth2-gitlab.git",
-                "reference": "0c37361c54fae71a85350c445bda1834db5859af"
+                "reference": "3dee862326d999b0517da4dd83b169e08f5ddf0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/0c37361c54fae71a85350c445bda1834db5859af",
-                "reference": "0c37361c54fae71a85350c445bda1834db5859af",
+                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/3dee862326d999b0517da4dd83b169e08f5ddf0a",
+                "reference": "3dee862326d999b0517da4dd83b169e08f5ddf0a",
                 "shasum": ""
             },
             "require": {
+                "ext-intl": "*",
+                "ext-mbstring": "*",
                 "league/oauth2-client": "^2.4.1",
-                "php": ">=7.2"
+                "php": ">=8.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.0",
-                "guzzlehttp/psr7": "^1.6",
-                "http-interop/http-factory-guzzle": "^1.0",
-                "m4tthumphrey/php-gitlab-api": "^10.0|^11.0",
-                "mockery/mockery": "^1.0",
-                "php-http/guzzle7-adapter": "^0.1",
-                "phpunit/phpunit": "^8.0|^9.0"
+                "friendsofphp/php-cs-fixer": "^3.65.0",
+                "guzzlehttp/psr7": "^2.7.0",
+                "http-interop/http-factory-guzzle": "^1.2",
+                "infection/infection": "^0.27.11",
+                "m4tthumphrey/php-gitlab-api": "^11.14",
+                "mockery/mockery": "^1.6.12",
+                "php-http/guzzle7-adapter": "^1.1.0",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^2.0.4",
+                "phpstan/phpstan-mockery": "^2.0.0",
+                "phpstan/phpstan-phpunit": "^2.0.3",
+                "phpunit/phpunit": "^10.5.39"
             },
             "suggest": {
                 "m4tthumphrey/php-gitlab-api": "For further API usage using the acquired OAuth2 token"
             },
-            "time": "2021-02-08T12:15:55+00:00",
+            "time": "2024-12-20T15:42:03+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -413,35 +358,84 @@
             ],
             "support": {
                 "issues": "https://github.com/omines/oauth2-gitlab/issues",
-                "source": "https://github.com/omines/oauth2-gitlab/tree/3.4.0"
+                "source": "https://github.com/omines/oauth2-gitlab/tree/3.7.0"
             },
             "install-path": "../omines/oauth2-gitlab"
         },
         {
+            "name": "pietervanderweel/oauth2-scouting",
+            "version": "dev-scouting",
+            "version_normalized": "dev-scouting",
+            "dist": {
+                "type": "path",
+                "url": "./packages/pietervanderweel/oauth2-scouting",
+                "reference": "d87de84b998c5c968718eb92e4b6e781ced70661"
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Pietervanderweel\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Pietervanderweel\\OAuth2\\Client\\Test\\": "test/src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pieter van der Weel",
+                    "email": "webmaster@johnmott.nl",
+                    "homepage": "https://github.com/pieter91"
+                }
+            ],
+            "description": "Scouting Nederland OAuth 2.0 and OIDC Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "scouting",
+                "scouting"
+            ],
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../pietervanderweel/oauth2-scouting"
+        },
+        {
             "name": "stevenmaguire/oauth2-keycloak",
-            "version": "3.0.0",
-            "version_normalized": "3.0.0.0",
+            "version": "3.2.0",
+            "version_normalized": "3.2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevenmaguire/oauth2-keycloak.git",
-                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11"
+                "reference": "34e4824f5fa26aa8e90f1258859c75570c12d27a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevenmaguire/oauth2-keycloak/zipball/645b84107b82a08cfed9c101081eb8548ea5be11",
-                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11",
+                "url": "https://api.github.com/repos/stevenmaguire/oauth2-keycloak/zipball/34e4824f5fa26aa8e90f1258859c75570c12d27a",
+                "reference": "34e4824f5fa26aa8e90f1258859c75570c12d27a",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "~4.0|~5.0",
-                "league/oauth2-client": "^2.0 <2.3.0"
+                "league/oauth2-client": "^2.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "~4.0",
                 "squizlabs/php_codesniffer": "~2.0"
             },
-            "time": "2022-01-23T18:01:00+00:00",
+            "time": "2022-12-16T12:46:38+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -476,7 +470,7 @@
             ],
             "support": {
                 "issues": "https://github.com/stevenmaguire/oauth2-keycloak/issues",
-                "source": "https://github.com/stevenmaguire/oauth2-keycloak/tree/3.0.0"
+                "source": "https://github.com/stevenmaguire/oauth2-keycloak/tree/3.2.0"
             },
             "install-path": "../stevenmaguire/oauth2-keycloak"
         },
@@ -600,21 +594,23 @@
         },
         {
             "name": "wohali/oauth2-discord-new",
-            "version": "1.1.0",
-            "version_normalized": "1.1.0.0",
+            "version": "1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wohali/oauth2-discord-new.git",
-                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6"
+                "reference": "2df4d2a882e04c749880797704e4bde8f00ea1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/0dcb5059cded358f55ae566de9621652cf8542c6",
-                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6",
+                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/2df4d2a882e04c749880797704e4bde8f00ea1d9",
+                "reference": "2df4d2a882e04c749880797704e4bde8f00ea1d9",
                 "shasum": ""
             },
             "require": {
-                "league/oauth2-client": "^2.0"
+                "ext-json": "*",
+                "league/oauth2-client": "^2.0",
+                "php": "^7.2|^8.0"
             },
             "conflict": {
                 "team-reflex/oauth2-discord": ">=1.0"
@@ -625,7 +621,7 @@
                 "phpunit/phpunit": "~8.0",
                 "squizlabs/php_codesniffer": "^2.0"
             },
-            "time": "2020-06-12T07:27:09+00:00",
+            "time": "2022-12-29T18:45:10+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -660,7 +656,7 @@
             ],
             "support": {
                 "issues": "https://github.com/wohali/oauth2-discord-new/issues",
-                "source": "https://github.com/wohali/oauth2-discord-new/tree/master"
+                "source": "https://github.com/wohali/oauth2-discord-new/tree/1.2.1"
             },
             "install-path": "../wohali/oauth2-discord-new"
         }

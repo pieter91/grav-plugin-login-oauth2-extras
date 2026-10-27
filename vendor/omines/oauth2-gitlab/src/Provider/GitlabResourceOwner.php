@@ -11,6 +11,7 @@
 namespace Omines\OAuth2\Client\Provider;
 
 use Gitlab\Client;
+use Gitlab\HttpClient\Builder;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use League\OAuth2\Client\Token\AccessToken;
 
@@ -18,22 +19,23 @@ use League\OAuth2\Client\Token\AccessToken;
  * GitlabResourceOwner.
  *
  * @author Niels Keurentjes <niels.keurentjes@omines.com>
+ *
+ * @phpstan-type ResourceOwner array{id: int, is_admin: bool, name: string, username: string, email: string, avatar_url: string, web_url: string, state: string, external: bool}
  */
 class GitlabResourceOwner implements ResourceOwnerInterface
 {
-    const PATH_API = '/api/v4/';
+    public const PATH_API = '/api/v4/';
 
-    /** @var array */
-    private $data;
+    /** @var ResourceOwner */
+    private array $data;
 
-    /** @var string */
-    private $domain;
-
-    /** @var AccessToken */
-    private $token;
+    private string $domain;
+    private AccessToken $token;
 
     /**
      * Creates new resource owner.
+     *
+     * @param ResourceOwner $response
      */
     public function __construct(array $response, AccessToken $token)
     {
@@ -46,20 +48,22 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function getId(): int
     {
-        return (int) $this->get('id');
+        return (int) ($this->data['id'] ?? 0);
     }
 
     /**
      * Returns an authenticated API client.
      *
      * Requires optional Gitlab API client to be installed.
+     *
+     * @infection-ignore-all Cannot be tested for infection due to external dependency
      */
-    public function getApiClient(): Client
+    public function getApiClient(?Builder $builder = null): Client
     {
         if (!class_exists('\\Gitlab\\Client')) {
             throw new \LogicException(__METHOD__ . ' requires package m4tthumphrey/php-gitlab-api to be installed and autoloaded'); // @codeCoverageIgnore
         }
-        $client = new Client();
+        $client = new Client($builder);
         $client->setUrl(rtrim($this->domain, '/') . self::PATH_API);
         $client->authenticate($this->token->getToken(), Client::AUTH_OAUTH_TOKEN);
 
@@ -71,9 +75,6 @@ class GitlabResourceOwner implements ResourceOwnerInterface
         return $this->domain;
     }
 
-    /**
-     * @return $this
-     */
     public function setDomain(string $domain): self
     {
         $this->domain = $domain;
@@ -86,7 +87,7 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function getName(): string
     {
-        return $this->get('name');
+        return $this->data['name'];
     }
 
     /**
@@ -94,7 +95,7 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function getUsername(): string
     {
-        return $this->get('username');
+        return $this->data['username'];
     }
 
     /**
@@ -102,25 +103,23 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function getEmail(): string
     {
-        return $this->get('email');
+        return $this->data['email'];
     }
 
     /**
      * URL to the user's avatar.
-     *
-     * @return string|null
      */
-    public function getAvatarUrl(): string
+    public function getAvatarUrl(): ?string
     {
-        return $this->get('avatar_url');
+        return $this->data['avatar_url'];
     }
 
     /**
      * URL to the user's profile page.
      */
-    public function getProfileUrl(): string
+    public function getProfileUrl(): ?string
     {
-        return $this->get('web_url');
+        return $this->data['web_url'];
     }
 
     public function getToken(): AccessToken
@@ -133,7 +132,7 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function isActive(): bool
     {
-        return 'active' === $this->get('state');
+        return 'active' === ($this->data['state'] ?? null);
     }
 
     /**
@@ -141,7 +140,7 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function isAdmin(): bool
     {
-        return (bool) $this->get('is_admin', false);
+        return $this->data['is_admin'] ?? false;
     }
 
     /**
@@ -149,23 +148,16 @@ class GitlabResourceOwner implements ResourceOwnerInterface
      */
     public function isExternal(): bool
     {
-        return (bool) $this->get('external', true);
+        return $this->data['external'] ?? true;
     }
 
     /**
      * Return all of the owner details available as an array.
+     *
+     * @return ResourceOwner
      */
     public function toArray(): array
     {
         return $this->data;
-    }
-
-    /**
-     * @param  mixed|null $default
-     * @return mixed|null
-     */
-    protected function get(string $key, $default = null)
-    {
-        return isset($this->data[$key]) ? $this->data[$key] : $default;
     }
 }
